@@ -1,0 +1,30 @@
+/* Banner.css */
+
+.banner-slide {
+    position: relative;
+  }
+  
+  .banner-slide img{
+    height: 700px;
+  }
+  .banner-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#d9d9d9; 
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .banner-text h1 {
+    font-size: 36px; 
+    margin: 0;
+  }
+  
+  .banner-text p {
+    font-size: 18px; 
+    margin-top: 10px;
+  }
