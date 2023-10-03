@@ -1,4 +1,5 @@
-import { gql } from "../__generated__";
+import { gql } from "./__generated__";
+
 
 export const GET_SHIPS=gql(`
 query Ships {
@@ -7,6 +8,7 @@ query Ships {
       id
       roles
      home_port
+   
     }
    }
 `)

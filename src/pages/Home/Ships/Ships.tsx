@@ -8,8 +8,11 @@ const Ships = () => {
   if (error) return <p>Error : {error.message}</p>;
 
   return (
-    <>
-      <div className="grid grid-cols-3 gap-4 ships mb-2">
+    <div>
+      <h1 className="text-center font-bold text-3xl text-blue-600">
+        ---SpaceX Ships Details---
+      </h1>
+      <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 ships mb-2">
         {data?.ships?.map((ship) => (
           <div key={ship?.id}>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -25,7 +28,7 @@ const Ships = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
