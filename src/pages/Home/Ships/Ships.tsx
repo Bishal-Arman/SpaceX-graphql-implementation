@@ -1,5 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { GET_SHIPS } from "../../../graphql/queries";
+import { Ship } from "../../../graphql/__generated__/graphql";
+import ShipCard from "./ShipCard";
 import "./Ships.css";
 
 const Ships = () => {
@@ -13,19 +15,11 @@ const Ships = () => {
         ---SpaceX Ships Details---
       </h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 ships mb-2">
-        {data?.ships?.map((ship) => (
-          <div key={ship?.id}>
-            <div className="card w-96 bg-base-100 shadow-xl">
-              <div className="card-body items-center text-center">
-                <h2 className="card-title">Ship Name - {ship?.name}!</h2>
-                <p className="text-orange-500">Home Port - {ship?.home_port}</p>
-                <p className="text-fuchsia-800">Role - {ship?.roles}</p>
-                <div className="card-actions">
-                  <button className="btn btn-primary">Details</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        {data?.ships?.map((ship : Ship | null) => ( <ShipCard
+        key={ship?.id}
+        ship={ship}
+        ></ShipCard>
+          
         ))}
       </div>
     </div>
