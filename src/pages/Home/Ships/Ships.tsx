@@ -15,11 +15,8 @@ const Ships = () => {
         ---SpaceX Ships Details---
       </h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 ships mb-2">
-        {data?.ships?.map((ship : Ship | null) => ( <ShipCard
-        key={ship?.id}
-        ship={ship}
-        ></ShipCard>
-          
+        {data?.ships?.map((ship: Ship | null) => (
+          <ShipCard key={ship?.id} ship={ship}></ShipCard>
         ))}
       </div>
     </div>

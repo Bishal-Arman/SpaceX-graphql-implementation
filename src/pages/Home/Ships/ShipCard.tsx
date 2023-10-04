@@ -8,7 +8,7 @@ const ShipCard = ({ ship }: { ship: Ship | null }) => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Ship Name - {ship?.name}!</h2>
             <p className="text-orange-500">Home Port - {ship?.home_port}</p>
-            <p className="text-fuchsia-800">Role - {ship?.roles}</p>
+            <p className="text-fuchsia-800">Role - {ship?.roles?.[0]}</p>
             <div className="card-actions">
               <button className="btn btn-primary">Details</button>
             </div>
